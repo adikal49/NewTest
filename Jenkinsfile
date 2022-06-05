@@ -1,9 +1,14 @@
 pipeline {
-	agent any
+	agent {
+		docker {
+			image 'maven:3.6.3'
+		}
+	}
 	stages {
 		stage ('validate') {
 			steps {
 				echo "Validating"
+				sh 'mvn --version'
 			}
 		}
 		stage ('compile') {
