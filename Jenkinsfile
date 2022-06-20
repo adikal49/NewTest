@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	triggers {
-		pollSCM ('30 16 * * *')
+		pollSCM '31 16 * * *'
 	}
 	stages {
 		stage ('validate') {
