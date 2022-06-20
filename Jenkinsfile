@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	triggers {
-		cron ('26 16 * * *')
+		pollSCM ('30 16 * * *')
 	}
 	stages {
 		stage ('validate') {
